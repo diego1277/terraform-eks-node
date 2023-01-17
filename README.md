@@ -24,7 +24,7 @@ Binary version ```v1.3.2```
 | [tls_private_key.rsa](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key) | resource |
 
 ## How to
-Set default configuration
+Set up default configuration
 ```
 module "node" {
   source = "github.com/diego1277/terraform-eks-node.git"
