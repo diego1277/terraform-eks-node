@@ -1,10 +1,9 @@
-# Terraform EKS node module
+# Terraform EKS nodegroup module
 
 ## Requirements
 Binary version ```v1.3.2```
 
 ## Providers
-
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | 4.41.0 |
@@ -12,7 +11,6 @@ Binary version ```v1.3.2```
 | <a name="provider_tls"></a> [tls](#provider\_tls) | 4.0.4 |
 
 ## Resources
-
 | Name | Type |
 |------|------|
 | [aws_eks_node_group.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_node_group) | resource |
@@ -37,7 +35,6 @@ module "node" {
 }
 ```
 ## Inputs
-
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_additional_tags"></a> [additional\_tags](#input\_additional\_tags) | additional tags | `map(any)` | `{}` | no |
@@ -54,7 +51,6 @@ module "node" {
 | <a name="input_taints"></a> [taints](#input\_taints) | node taints | `map(object({key=string,value=optional(string),effect=optional(string,"NO_SCHEDULE")}))` | `{}` | no |
 
 ## Outputs
-
 No outputs.
 
 ## Author:
