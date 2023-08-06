@@ -5,6 +5,7 @@ resource "aws_eks_node_group" "this" {
   node_role_arn   = aws_iam_role.node.arn
   capacity_type = var.capacity_type
   instance_types = var.instance_types
+  version = var.node_version
   subnet_ids = var.subnets_id
 
   remote_access {
