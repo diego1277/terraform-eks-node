@@ -8,6 +8,12 @@ variable name {
   type        = string
 }
 
+variable node_version {
+  description = "node version"
+  type        = string
+  default     = "1.24"
+}
+
 variable ssh_key_name {
   description = "ssh key name"
   type = string
