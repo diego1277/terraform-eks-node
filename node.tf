@@ -34,3 +34,8 @@ resource "aws_eks_node_group" "this" {
   ]
   tags = local.common_tags
 }
+
+resource "aws_iam_instance_profile" "nodes" {
+  name = "${var.cluster_name}-instance-profile"
+  role = aws_iam_role.eks_nodes_roles.name
+}
