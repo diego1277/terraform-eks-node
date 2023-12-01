@@ -29,3 +29,8 @@ resource "aws_iam_role_policy_attachment" "node_AutoscalingFullAccess" {
   policy_arn = "arn:aws:iam::aws:policy/AutoScalingFullAccess"
   role       = aws_iam_role.node.name
 }
+
+resource "aws_iam_instance_profile" "this" {
+  name = "${var.cluster_name}-instance-profile"
+  role = aws_iam_role.node.name
+}
