@@ -1,5 +1,4 @@
 resource "aws_security_group" "this" {
-
     name = "${var.name}_master_sg"
     description = "master sg"
     vpc_id = var.vpc_id
@@ -22,5 +21,7 @@ resource "aws_security_group" "this" {
     tags = {
         Name = "${var.name}_master_sg"
     }
+
+   tags = local.common_tags
 
 }
