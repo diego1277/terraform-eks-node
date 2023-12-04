@@ -71,3 +71,9 @@ variable additional_tags {
   type = map(any)
   default = {}
 }
+
+variable node_group {
+  description = "node group configuration"
+  type        = string
+  default     = {}
+}

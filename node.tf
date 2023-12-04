@@ -1,12 +1,12 @@
 resource "aws_eks_node_group" "this" {
-    
+  for_each = var.node_group    
   cluster_name    = var.cluster_name
-  node_group_name = var.name
+  node_group_name = each.value.name
   node_role_arn   = aws_iam_role.node.arn
-  capacity_type = var.capacity_type
-  instance_types = var.instance_types
+  capacity_type = each.value.capacity_type
+  instance_types = each.value.instance_types
   version = var.node_version
-  subnet_ids = var.subnets_id
+  subnet_ids = each.value.subnet_ids
 
   remote_access {
     ec2_ssh_key = try(aws_key_pair.this[0].id,var.ssh_key_name)
